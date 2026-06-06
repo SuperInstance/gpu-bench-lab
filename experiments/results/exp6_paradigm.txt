@@ -1,0 +1,95 @@
+Device: NVIDIA GeForce RTX 4050 Laptop GPU
+
+======================================================================
+EXPERIMENT: Plato Room Paradigm Comparison
+======================================================================
+
+  Sensors: 8, Rooms: 5, Ticks: 10000
+
+  Room Tick Throughput:
+    Standard: 84.4 ms (119 ticks/sec)
+    Ternary bridge: 693.4 ms (14 ticks/sec)
+    Music sync: 602.7 ms (17 ticks/sec)
+    Fleet correlation: 76.1 ms
+
+======================================================================
+SCALING ANALYSIS
+======================================================================
+
+  Room Tick vs Sensor Count (10K ticks):
+       8 sensors: 64.5 ms
+      16 sensors: 63.0 ms
+      32 sensors: 62.0 ms
+      64 sensors: 62.8 ms
+     128 sensors: 62.1 ms
+     256 sensors: 61.5 ms
+
+  Music Sync vs Room Count (10K ticks):
+       5 rooms: (simulated)
+      10 rooms: (simulated)
+      20 rooms: (simulated)
+      50 rooms: (simulated)
+     100 rooms: (simulated)
+     500 rooms: (simulated)
+
+  Fleet Correlation vs Scale:
+    5 rooms × 8 sensors × 10000 ticks: 0.2 ms
+    10 rooms × 8 sensors × 10000 ticks: 0.1 ms
+    20 rooms × 8 sensors × 10000 ticks: 0.2 ms
+    50 rooms × 8 sensors × 10000 ticks: 1.2 ms
+
+======================================================================
+PLATO IMPLEMENTATION MATRIX
+======================================================================
+
+  Implementation                 Language   Tests    Runtime         Cross-compile  
+  ------------------------------------------------------------------------------
+  plato-engine-block             Rust       22       Bare metal      cargo build --target
+  plato-engine-block-c           C          35       Bare metal      zig cc --target
+  plato-agent-python             Python     55       CPython         N/A (interpreted)
+  plato-engine-block-zig         Zig        35+      Bare metal      zig build -Dtarget
+  plato-engine-block-elixir      Elixir     20+      BEAM VM         BEAM clustering
+  plato-engine-block-gleam       Gleam      15+      BEAM VM         BEAM clustering
+  plato-fleet-chapel             Chapel     15+      PGAS            Multi-locale   
+  plato-demo                     Rust       36       None            N/A (self-contained)
+  plato-quickstart               Rust       0        None            N/A (CLI tool) 
+
+  Total: 9 implementations, ~228+ tests, 4+ languages, 3+ runtime models
+
+======================================================================
+PARADIGM TRADE-OFFS
+======================================================================
+
+  Bare metal (Rust, C, Zig):
+    + Nanosecond tick precision
+    + Runs on $4 ESP32
+    + No runtime dependency
+    - No built-in fault tolerance
+    - Distribution is manual (TCP)
+
+  Actor model (Elixir, Gleam):
+    + Fault tolerance by default (supervisor trees)
+    + Distribution built-in (BEAM clustering)
+    + Hot code reload (update rooms without stopping)
+    - Higher per-tick latency (~microseconds)
+    - BEAM overhead on small devices
+
+  PGAS (Chapel):
+    + Write once, run distributed
+    + Natural locale = room mapping
+    + High-level array abstractions
+    - Requires Chapel runtime on each node
+    - Less mature ecosystem
+
+  GPU (PTX/CUDA):
+    + 1000× throughput for batch operations
+    + Sub-ms fleet correlation at scale
+    + XNOR+popcount for ternary on CUDA cores
+    - Overkill for single-room ticks
+    - Not available on edge devices
+
+  WINNING COMBO:
+    Bare metal on the room (Rust/C/Zig on ESP32)
+    Actor model for the fleet (Elixir on RPi)
+    GPU for batch analysis (CUDA on laptop)
+    Chapel for research-scale distribution
