@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/phoenix/repos/gpu-bench-lab/experiments/ternary_accuracy_benchmark.py", line 19, in <module>
+    from torchvision import datasets, transforms
+  File "/home/phoenix/.local/lib/python3.10/site-packages/torchvision/__init__.py", line 10, in <module>
+    from torchvision import _meta_registrations, datasets, io, models, ops, transforms, utils  # usort:skip
+  File "/home/phoenix/.local/lib/python3.10/site-packages/torchvision/_meta_registrations.py", line 164, in <module>
+    def meta_nms(dets, scores, iou_threshold):
+  File "/home/phoenix/.local/lib/python3.10/site-packages/torch/library.py", line 1085, in register
+    use_lib._register_fake(
+  File "/home/phoenix/.local/lib/python3.10/site-packages/torch/library.py", line 202, in _register_fake
+    handle = entry.fake_impl.register(
+  File "/home/phoenix/.local/lib/python3.10/site-packages/torch/_library/fake_impl.py", line 50, in register
+    if torch._C._dispatch_has_kernel_for_dispatch_key(self.qualname, "Meta"):
+RuntimeError: operator torchvision::nms does not exist
