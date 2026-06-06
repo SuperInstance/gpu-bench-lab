@@ -1,0 +1,318 @@
+{
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "pytorch": "2.12.0+cu130",
+  "results": [
+    {
+      "name": "matmul_FP32_256x256",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.046010350069991546,
+      "min_ms": 0.03212999945390038,
+      "p50_ms": 0.04668850033340277,
+      "iters": 20
+    },
+    {
+      "name": "matmul_FP16_256x256",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.03960800013373955,
+      "min_ms": 0.03199300044798292,
+      "p50_ms": 0.03664100131572923,
+      "iters": 20
+    },
+    {
+      "name": "matmul_BF16_256x256",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.040822449955157936,
+      "min_ms": 0.032579000617261045,
+      "p50_ms": 0.036911499591951724,
+      "iters": 20
+    },
+    {
+      "name": "matmul_FP32_1024x1024",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.40060550018097274,
+      "min_ms": 0.37942000017210376,
+      "p50_ms": 0.395948501136445,
+      "iters": 20
+    },
+    {
+      "name": "matmul_FP16_1024x1024",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.1686358003098576,
+      "min_ms": 0.1598369999555871,
+      "p50_ms": 0.16881749979802407,
+      "iters": 20
+    },
+    {
+      "name": "matmul_BF16_1024x1024",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.16439499995613005,
+      "min_ms": 0.15642800099158194,
+      "p50_ms": 0.16034150030463934,
+      "iters": 20
+    },
+    {
+      "name": "matmul_FP32_2048x2048",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 2.5040812502993504,
+      "min_ms": 2.483166001184145,
+      "p50_ms": 2.4966640003185603,
+      "iters": 20
+    },
+    {
+      "name": "matmul_FP16_2048x2048",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.8266890498816792,
+      "min_ms": 0.8107339999696705,
+      "p50_ms": 0.8176679993994185,
+      "iters": 20
+    },
+    {
+      "name": "matmul_BF16_2048x2048",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.8121858500089729,
+      "min_ms": 0.8052420016610995,
+      "p50_ms": 0.8107829999062233,
+      "iters": 20
+    },
+    {
+      "name": "ternary_sign_256x256",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.05596095015789615,
+      "min_ms": 0.037448000512085855,
+      "p50_ms": 0.04400350007927045,
+      "iters": 20
+    },
+    {
+      "name": "ternary_direct_256x256",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.037974400129314745,
+      "min_ms": 0.031073001082404517,
+      "p50_ms": 0.03339949944347609,
+      "iters": 20
+    },
+    {
+      "name": "ternary_sign_1024x1024",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.4175320500507951,
+      "min_ms": 0.3989329998148605,
+      "p50_ms": 0.40548400011175545,
+      "iters": 20
+    },
+    {
+      "name": "ternary_direct_1024x1024",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.3879698001583165,
+      "min_ms": 0.3788430003623944,
+      "p50_ms": 0.3837844997178763,
+      "iters": 20
+    },
+    {
+      "name": "KNN_gpu_10000x32",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.0756446000195865,
+      "min_ms": 0.06859300083306152,
+      "p50_ms": 0.06988649965933291,
+      "iters": 20
+    },
+    {
+      "name": "KNN_numpy_10000x32",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.029321750025701476,
+      "min_ms": 0.027583000701270066,
+      "p50_ms": 0.027912499717785977,
+      "iters": 20
+    },
+    {
+      "name": "KNN_gpu_100000x32",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.20183134993203566,
+      "min_ms": 0.1699799995549256,
+      "p50_ms": 0.19640050049929414,
+      "iters": 20
+    },
+    {
+      "name": "KNN_numpy_100000x32",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.22125420000520535,
+      "min_ms": 0.18032400112133473,
+      "p50_ms": 0.20998550007789163,
+      "iters": 20
+    },
+    {
+      "name": "KNN_gpu_10000x384",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.10280454989697319,
+      "min_ms": 0.08752000030654017,
+      "p50_ms": 0.09768650033947779,
+      "iters": 20
+    },
+    {
+      "name": "KNN_numpy_10000x384",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.23390134983856115,
+      "min_ms": 0.07062199983920436,
+      "p50_ms": 0.13596799999504583,
+      "iters": 20
+    },
+    {
+      "name": "KNN_gpu_100000x384",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 1.12924565000867,
+      "min_ms": 0.967523001236259,
+      "p50_ms": 1.0158535005757585,
+      "iters": 20
+    },
+    {
+      "name": "KNN_numpy_100000x384",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 2.7312428002005618,
+      "min_ms": 2.1550080000452,
+      "p50_ms": 2.3519220003436203,
+      "iters": 20
+    },
+    {
+      "name": "embed_search_1000x32_100q",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.13592159984909813,
+      "min_ms": 0.08427400098298676,
+      "p50_ms": 0.09615299950382905,
+      "iters": 20
+    },
+    {
+      "name": "embed_search_10000x32_100q",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.3088680499786278,
+      "min_ms": 0.23116199918149505,
+      "p50_ms": 0.3064815000470844,
+      "iters": 20
+    },
+    {
+      "name": "embed_search_100000x32_100q",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 1.6840541500641848,
+      "min_ms": 1.6182569997909013,
+      "p50_ms": 1.6454340002383105,
+      "iters": 20
+    },
+    {
+      "name": "sum_gpu_100K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.06084674960220582,
+      "min_ms": 0.048997999329003505,
+      "p50_ms": 0.06011249843140831,
+      "iters": 20
+    },
+    {
+      "name": "sort_gpu_100K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.21778535010525957,
+      "min_ms": 0.15225300012389198,
+      "p50_ms": 0.17316400044364855,
+      "iters": 20
+    },
+    {
+      "name": "sum_numpy_100K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.017095999828597996,
+      "min_ms": 0.016320998838637024,
+      "p50_ms": 0.01644750045670662,
+      "iters": 20
+    },
+    {
+      "name": "sort_numpy_100K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.2278882000609883,
+      "min_ms": 0.21501199989870656,
+      "p50_ms": 0.22507499943458242,
+      "iters": 20
+    },
+    {
+      "name": "sum_gpu_1000K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.0352928500433336,
+      "min_ms": 0.030152999897836708,
+      "p50_ms": 0.030770500416110735,
+      "iters": 20
+    },
+    {
+      "name": "sort_gpu_1000K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.41162740026265965,
+      "min_ms": 0.39002499943308067,
+      "p50_ms": 0.4078325009686523,
+      "iters": 20
+    },
+    {
+      "name": "sum_numpy_1000K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.10825404988281662,
+      "min_ms": 0.10057599865831435,
+      "p50_ms": 0.1036334997479571,
+      "iters": 20
+    },
+    {
+      "name": "sort_numpy_1000K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 2.4241205998805526,
+      "min_ms": 2.2830229991086526,
+      "p50_ms": 2.3281259991563275,
+      "iters": 20
+    },
+    {
+      "name": "sum_gpu_10000K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 0.24557664983149152,
+      "min_ms": 0.2360399994358886,
+      "p50_ms": 0.24341150037798798,
+      "iters": 20
+    },
+    {
+      "name": "sort_gpu_10000K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 6.267069449950213,
+      "min_ms": 6.019083999490249,
+      "p50_ms": 6.130963000032352,
+      "iters": 20
+    },
+    {
+      "name": "sum_numpy_10000K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 1.655390700125281,
+      "min_ms": 1.409701999364188,
+      "p50_ms": 1.4921444999345113,
+      "iters": 20
+    },
+    {
+      "name": "sort_numpy_10000K",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": 34.338474049945944,
+      "min_ms": 32.03041699998721,
+      "p50_ms": 32.72509049929795,
+      "iters": 20
+    },
+    {
+      "name": "conv1d_4096len_16kern_4ch",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": -1,
+      "min_ms": -1,
+      "p50_ms": -1,
+      "iters": 0
+    },
+    {
+      "name": "conv1d_16384len_32kern_8ch",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": -1,
+      "min_ms": -1,
+      "p50_ms": -1,
+      "iters": 0
+    },
+    {
+      "name": "conv1d_65536len_64kern_16ch",
+      "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "avg_ms": -1,
+      "min_ms": -1,
+      "p50_ms": -1,
+      "iters": 0
+    }
+  ]
+}
