@@ -1,4 +1,6 @@
 [package]
+description = "gpu-bench-lab - SuperInstance ecosystem crate"
+repository = "https://github.com/SuperInstance/gpu-bench-lab"
 name = "gpu-bench-lab"
 version = "0.1.0"
 edition = "2024"
